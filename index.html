@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 加入這一行：解決 Imgur 圖片無法顯示（防盜鏈）的問題 -->
+    <meta name="referrer" content="no-referrer">
+    
     <title>測一測你是哪種人 - 孟子四端大冒險</title>
     <!-- 引入外部資源：Tailwind CSS 與 Anime.js -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -277,12 +280,10 @@
                 <h1 class="text-4xl font-black mb-4 glowing-text">《測一測你是哪種人》</h1>
                 <p class="text-xl text-gray-300 mb-8">孟子「四端」大冒險</p>
 
-                <!-- 【小白替換圖片區 - 首頁】 -->
-                <!-- 請將下面 src 裡面的網址換成你自己的圖片網址 -->
+                <!-- 首頁圖片已經換為第一關的圖片作為範例，你也可以隨時更換為其他 Imgur 網址 -->
                 <div class="mb-8 rounded-xl overflow-hidden border-2 border-slate-600 h-48 md:h-64 flex items-center justify-center bg-slate-800">
-                    <img src="https://via.placeholder.com/800x400/334155/fbbf24?text=點擊代碼更換：首頁封面圖片" alt="封面圖" class="w-full h-full object-cover" />
+                    <img src="https://i.imgur.com/VEuoxbb.jpg" alt="封面圖" class="w-full h-full object-cover" />
                 </div>
-                <!-- 替換圖片區結束 -->
 
                 <button onclick="startGame()" class="bg-yellow-500 text-slate-900 font-bold py-4 px-12 rounded-full text-xl hover:scale-105 transition-all">開始測驗</button>
             </div>
@@ -310,12 +311,10 @@
                 
                 <p class="text-lg text-gray-200 mb-6 bg-slate-800/50 p-4 rounded-lg leading-relaxed">${caseData.situation}</p>
                 
-                <!-- 【小白替換圖片區 - 案件關卡】 -->
-                <!-- 注意：關卡的圖片網址請到上方 CASES 陣列中的 imageUrl 修改 -->
+                <!-- 【案件關卡圖片】 -->
                 <div class="mb-6 rounded-xl overflow-hidden border-2 border-slate-600 h-48 md:h-64 flex items-center justify-center bg-slate-800">
                     <img src="${caseData.imageUrl}" alt="情境圖" class="w-full h-full object-cover" />
                 </div>
-                <!-- 替換圖片區結束 -->
 
                 <div class="space-y-4 options-container">
                     ${caseData.options.map((opt, i) => `
